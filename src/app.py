@@ -2,8 +2,8 @@ import datetime
 import customtkinter as ctk
 from tkinter import messagebox, ttk
 from tkcalendar import Calendar
-from task import Task
-from scheduler import Scheduler
+from src.task import Task
+from src.scheduler import Scheduler
 
 class TaskTrackerApp:
     """
@@ -266,8 +266,3 @@ class TaskTrackerApp:
                 self.task_tree.insert("", "end", values=display_text)
         else:
             self.task_tree.insert("", "end", values=("Нет задач на выбранную дату.", "", "", "", "", ""))
-
-if __name__ == "__main__":
-    root = ctk.CTk()
-    app = TaskTrackerApp(root)
-    root.mainloop()
